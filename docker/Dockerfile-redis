@@ -1,0 +1,7 @@
+FROM redis:7.2
+
+COPY ./data/data.rdb /data/
+COPY ./data/redis.conf /usr/local/etc/redis/redis.conf
+
+ENV PASSWORD="123123"
+CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
