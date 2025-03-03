@@ -13,5 +13,4 @@ rm tls*
 rm data/redis.conf.bak
 rm k8s/secret.yaml.bak
 
-# clean /etc/hosts file, remove the map for myapp.local
-sudo sed -i '' -e '$ d' /etc/hosts
+minikube delete
