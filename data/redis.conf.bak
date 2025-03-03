@@ -1,4 +1,4 @@
 requirepass 456456
-user default on >456456 allkeys allcommands
+user default on >98989898 allkeys allcommands
 dir /data
 dbfilename data.rdb

@@ -5,7 +5,7 @@ echo ""
 
 #minikube setup
 eval $(minikube docker-env) # set minikube to work with local images
-minikube start
+minikube start --driver=docker
 minikube addons enable ingress # enable ingress in minikube
 
 # Redis configuration file path
