@@ -20,7 +20,10 @@ spec:
         - containerPort: 9090
         env:
         - name: PASSWORD
-          value: "123123"
+          valueFrom:
+            secretKeyRef:
+              name: go-server-secret
+              key: password
         resources:
           requests:
             memory: "100Mi"
