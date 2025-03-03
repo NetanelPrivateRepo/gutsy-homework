@@ -1,4 +1,0 @@
-requirepass popol
-user default on >Net22 allkeys allcommands
-dir /data
-dbfilename data.rdb
