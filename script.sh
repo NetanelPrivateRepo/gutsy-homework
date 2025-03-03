@@ -41,6 +41,7 @@ docker build -t redis-server:latest -f docker/Dockerfile-redis .
 docker build -t go-server:latest -f docker/Dockerfile-go data
 
 docker images
+sleep 5
 
 # Generate TLS certs
 openssl req -x509 -newkey rsa:4096 -keyout tls.key -out tls.crt -days 365 -nodes -subj "/CN=myapp.local"
@@ -51,7 +52,9 @@ echo "127.0.0.1 myapp.local" | sudo tee -a /etc/hosts
 
 # create redis / go-server deployment
 kubectl apply -f k8s/secret.yaml
+sleep 5
 kubectl apply -f k8s/redis-deployment.yaml
+sleep 5
 kubectl apply -f k8s/go-server-deployment.yaml
 
 sudo minikube tunnel

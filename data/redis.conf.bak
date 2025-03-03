@@ -1,4 +1,4 @@
 requirepass popol
-user default on >popol allkeys allcommands
+user default on >Net22 allkeys allcommands
 dir /data
 dbfilename data.rdb
