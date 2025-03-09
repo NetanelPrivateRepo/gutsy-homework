@@ -37,7 +37,7 @@ kind: Service
 metadata:
   name: go-server
 spec:
-  type: LoadBalancer
+  type: LoadBalancer # enable access from the internet
   selector:
     app: go-server
   ports:
